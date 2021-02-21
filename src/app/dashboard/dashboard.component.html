@@ -1,0 +1,59 @@
+<div class="main-content">
+  <div class="container-fluid">
+   
+      <div class="row">
+        <div class="col-lg-2 col-md-2"> </div>
+          <div class="col-lg-8 col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-warning">
+                      <h4 class="card-title">Gestion Employées</h4>
+                      <p class="card-category">Modifier ou supprimer un employé</p>
+                  </div>
+                  <div class="card-body table-responsive">
+                      <table class="table table-hover">
+                          <thead class="text-warning">
+                              <th>ID</th>
+                              <th>Nom</th>
+                              <th>Prénom</th>
+                              <th>Adresse mail</th>
+                              <th>Modifier</th>
+                              <th>Supprimer</th>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let employe of employes">
+                                <td>
+                                    {{employe.id}}
+                                </td>
+                                <td>
+                                    {{employe.nom}}
+                                </td>
+                                <td>
+                                    {{employe.prenom}}
+                                </td>
+                                <td>
+                                    {{employe.adressMail}}
+                                </td>
+
+                                <td>
+                                    <button (click)="employeUpdate(employe.id)" mat-raised-button type="edit" matTooltip="Modifier" 
+                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                        <i class="material-icons">edit</i>
+                                    </button>
+                                  
+                                </td>
+                                <td>
+                                     <button (click)="deleteEmploye(employe.id)" mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
+                                          <i class="material-icons">close</i>
+                                      </button>          
+
+
+                                </td>          
+                          </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

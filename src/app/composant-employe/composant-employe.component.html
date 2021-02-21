@@ -1,0 +1,35 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3"></div>
+          <div class="col-md-5">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Créer des equipes</h4>
+                      <p class="card-category"><!-- ktiba khfifa-->  </p>
+                  </div>
+                  <div class="card-body">
+                          <form (ngSubmit)="onSubmit()">
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Nombre employé" id="nbremp" name="nbremp" required [(ngModel)]="nbremp">
+                                  </mat-form-field>
+                              </div>
+                            </div>
+                          <div class="row">   
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Nombre departement" id="nbrdep"  name="nbrdep" required [(ngModel)]="nbrdep">
+                                </mat-form-field>
+                            </div>
+                          </div>
+                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Ajouter</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
